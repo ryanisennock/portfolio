@@ -1,6 +1,6 @@
-<!-- a quick way to create a boiler plate (the skeleton of the hmtl file)
-     hold shift + 1 + enter 
-     boom!
+<!--a quick way to create a boiler plate (the skeleton of the hmtl file)
+    hold shift + 1 + enter 
+    boom!
     )-->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
         *cough* *cough*-->
     <title>Sweet Portfolio</title>
 
-    <!-- This is where we are linking the sick style sheet-->
+    <!--This is where we are linking the sick style sheet-->
     <link rel="stylesheet" href="styles/styles.css">
     
     <!--FONTS********************************* 
@@ -22,9 +22,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <!-- And my roboto font links will live here (hopefully 0_0)-->
+    <!--And my roboto font links will live here (hopefully 0_0)-->
+
+    <!--FONTAWESOME LINK-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
+<!--This is where we declared classes for each of the seperate pages of the website
+The MAIN LANDING PAGE is to showcase all of the video game projects
+The PROJECT OUTLINE is where when you click on an element on the main-landing page
+it will redirect you to a seperate page going more in depth on the video game
+(super duper stoked when I get to the timeline portion of this page)
+The RESUME AND ABOUT ME section will breifly introduce myself, show a profile picture
+have a scrollable resume with a link to download the resume 
+That's all for now... bye-->
+<body class="main-landing-page">
+    <header class="section sec1 header active">
+        <!--TESTING THE  FONT AWESOME WITH INSTAGRAM LOGO
+        When I use this one an icon shows up twice, one above the other, why?:
+        <i class="fab fa-instagram"></i>
+            
+        When I use this one an icon shows up once
+        According to font awesome aria-hiddden is used to improve
+        web accessibility and to hide icons that are just "for-show":   
+        <i class="fab fa-instagram" aria-hidden="true"></i>
     
+        When I do two lines the logo appears twice one to the right of the other
+        Which I thought there would be 4 logos "mirroring" each other:
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-instagram"></i>
+
+        Same results for:
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+    --> 
+    </header>
+    <main>
+        <section class="sec2 project outline"></section>
+        <section class="sec3 resume & about me"></section>
+    </main>
 </body>
 </html>
