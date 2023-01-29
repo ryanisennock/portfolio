@@ -5,9 +5,12 @@
     list-style: none;
 }
 
-/*LIGHT AND DARK MODE TOGGLE
-Let's use the tutorial's colors for now, but definetly need to revist*/
+//VARIABLES
+/*these are global variables which means this entire
+document can access them*/
 :root{
+    /*COLORS FOR THE LIGHT AND DARK MODE TOGGLE
+    Let's use the tutorial's colors for now, but definetly need to revist*/
     --color-primary: #191d2b;
     --color-secondary: #27AE60;
     --color-white: #FFFFFF;
@@ -19,8 +22,16 @@ Let's use the tutorial's colors for now, but definetly need to revist*/
     --color-grey-4: #454e56;
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
-    /* what is this? */
+    
+    //what is this?
     --br-sm-2: 14px;
+
+    //the transition "animation"*/
+    --sweet-animation: all .4s ease-in-out;
+
+    //box shadow for menu buttons
+    --box-shadow-menu: 0 3px 15px rgba(0,0,0,.3);
+    
 }
 body{
     background-color: var(--color-primary);
@@ -29,4 +40,99 @@ body{
     /*text color*/
     color: var(--color-white);
     transition: all .4s ease-in-out;
+}
+
+//anchor tags
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+/*the header (burger menu) needs to be viewable on every page
+to help the user naviagte the website*/
+header{
+    height: 100vh;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+/*This is the groundwork for letting the user "switch"
+between sections. the "switching" will be accomplished with
+javascript later*/
+section{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+//target a section class to make the sections off-screen by default
+.section{
+    transform: translateY(-100%) scale(0);
+    /*let's access that sweet animation varibale we made!*/
+    transition: var(--sweet-animation);
+    background-color: var(--color-primary);
+}
+
+/*target section 1 and make the display none by default,
+when the user clicks on the section the scaling from
+0 to 1 will create an animation effect*/
+.sec1{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec2{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.sec3{
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//CONTROLS
+.controls{
+    /*aligning the buttons to the right of the screen
+    from top-down*/
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    .control{
+        padding: 1rem;
+        cursor: pointer;
+        background-color: var(--color-grey-4);
+        /*to make something round the haight and width
+        have to be set to the same value*/
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        //aligns the icons within the circles
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        //spacing between buttons
+        margin: .7rem 0;
+        box-shadow: var(--box-shadow-menu);
+        /*inscss we can nest html elements,
+         which we are doing right now eeeee!*/
+        .i{
+            font-size: 1.2rem;
+            color: var(--color-grey-2);
+            /*when a mouse click happens, we actually 
+            want the icons to literally not do anything*/
+            pointer-events: none;
+        }
+    }
 }
