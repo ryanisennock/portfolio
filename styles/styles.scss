@@ -96,6 +96,16 @@ when the user clicks on the section the scaling from
     transform: translateY(0) scale(1);
 }
 
+//ACTIVE BUTTON
+.active-btn{
+    background-color: var(--color-secondary) !important;
+    transition: var(--sweet-animation);
+    i{
+        color: var(--color-white) !important;
+    }
+}
+
+
 //CONTROLS
 .controls{
     /*aligning the buttons to the right of the screen

@@ -87,6 +87,14 @@ when the user clicks on the section the scaling from
   transform: translateY(0) scale(1);
 }
 
+.active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: var(--sweet-animation);
+}
+.active-btn i {
+  color: var(--color-white) !important;
+}
+
 .controls {
   /*aligning the buttons to the right of the screen
   from top-down*/
