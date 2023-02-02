@@ -6,7 +6,7 @@ const sections = document.querySelectorAll('.section');
 /* initialize a constant variable named sectionButtons and set it equal to
 all of the elements within the controls class (the parent container of
 all of the buttons), referencing the index html file */
-const sectionButtons = document.querySelectorAll('.contols');
+const sectionButtons = document.querySelectorAll('.controls');
 
 /* initiliaze a constant variable named sectionButton and set it equal to
 all of the elemens within the control class,
@@ -16,7 +16,7 @@ const sectionButton = document.querySelectorAll('.control');
 /* initialize a constant variable named allSections and set it equal to
 all of the elements of the main-landing-page class (the body of
 the html file), referencing the index html file */
-const allSections = document.querySelectorAll('.main-landing-page'); 
+const allSections = document.querySelector('.main-landing-page'); 
 
 //A function to control the page transitions
 function PageTransitions(){
@@ -53,4 +53,5 @@ function PageTransitions(){
     }
 }
 
+//call the function that switches the sections
 PageTransitions();
